@@ -2,6 +2,10 @@
   "name": "Pivotal Tracker Easy Copy",
   "version": "0.1",
   "description": "Copy the story ID fast and easy",
+  "page_action": {
+    "default_icon": "icon.jpg",
+    "default_title": "Pivotal Tracker Easy Copy"
+  },
   "content_scripts" : [
     {
       "matches" : [
@@ -9,7 +13,7 @@
         "http://www.pivotaltracker.com/*"
       ],
       "js" : ["jquery.js", "contentscript.js"],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
   "permissions": [
@@ -17,9 +21,5 @@
     "https://www.pivotaltracker.com/*",
     "http://www.pivotaltracker.com/*"
   ],
-  "background_page" : "background.html",
-  "page_action": {
-    "default_icon": "icon.jpg"
-  }
-    
+  "background_page" : "background.html"
 }
