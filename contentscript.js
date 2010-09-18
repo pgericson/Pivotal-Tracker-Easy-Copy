@@ -158,7 +158,6 @@ e&&e.document?e.document.compatMode==="CSS1Compat"&&e.document.documentElement["
 
 // The Script
 $(document).ready(function(){
-  $('body').append('');
   $('div#content > table#layout div.item').live('click', function(){
     text = $(this).attr('id').replace(/[a-zA-Z_]+/,"");
     $(this).fadeOut().fadeIn();
