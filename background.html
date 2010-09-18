@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      chrome.extension.onRequest.addListener(function (request) {
+          var theTextArea = document.getElementById('the_text_area');
+          theTextArea.value = request.text;
+          theTextArea.select();
+          document.execCommand("Copy");
+      });
+    </script>
+  </head>
+  <body>
+    <textarea id="the_text_area"></textarea>
+  </body>
+</html>

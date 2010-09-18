@@ -1,0 +1,15 @@
+{
+  "name": "Pivot Easy Copy",
+  "version": "0.1",
+  "description": "Copy the story ID fast and easy",
+  "content_scripts" : [
+    {
+      "matches" : [
+        "https://*.pivotaltracker.com/*",
+        "http://*.pivotaltracker.com/*"
+      ],
+      "js" : [ "contentscript.js"]
+    }
+  ],
+  "background_page" : "background.html"
+}
