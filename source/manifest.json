@@ -1,6 +1,6 @@
 {
   "name": "Pivotal Tracker Easy Copy",
-  "version": "0.1",
+  "version": "0.1.1",
   "description": "Copy the story ID fast and easy with a single click on the story",
   "page_action": {
     "default_icon": "icon.jpg",
