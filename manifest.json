@@ -1,5 +1,5 @@
 {
-  "name": "Pivot Easy Copy",
+  "name": "Pivotal Tracker Easy Copy",
   "version": "0.1",
   "description": "Copy the story ID fast and easy",
   "content_scripts" : [
