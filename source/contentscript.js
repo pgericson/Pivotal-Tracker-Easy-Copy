@@ -1,9 +1,14 @@
-chrome.extension.sendRequest({'action': 'pageStart'}); 
+chrome.extension.sendRequest({'action': 'pageStart'});
 
 $(document).ready(function(){
-  $('div#content > table#layout div.item div.notUnderEdit').live('click', function(){
-    text = $(this).attr('id').replace(/.*?(\d+).*/,"$1");
-    $(this).parent().fadeOut(50).fadeIn(50);
-    chrome.extension.sendRequest({'text' : text});
+  $('.item').live('click', function(e){
+    if (e.shiftKey) {
+      var storyId = $(this).attr('id').replace(/.*?(\d+).*/,"$1");
+      var text    = "Copied: " + storyId;
+
+      $('<div id="copy-msg">').css({ color: 'black' }).html(text).prependTo('#status');
+      $('#status').fadeIn(10).delay(1000).fadeOut(500, function() { $('#copy-msg').remove(); })
+      chrome.extension.sendRequest({'text' : storyId});
+    }
   });
 });
