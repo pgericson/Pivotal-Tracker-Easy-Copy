@@ -1,3 +1,4 @@
 *.swp
 source.zip
 /safari
+.DS_Store
