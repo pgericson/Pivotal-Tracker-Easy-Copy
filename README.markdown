@@ -5,3 +5,5 @@ Install it, and when you click a story the extension will copy the story ID to y
 
 ## Install
 Just load the `.crx` file in Chrome or Chromium
+
+MIT License
